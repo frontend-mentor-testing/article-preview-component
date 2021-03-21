@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Manrope";
+  background: #ecf2f8;
+}
+
+.container {
+  border-radius: 10px;
+  width: 60%;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  box-shadow: 0 10px 20px #9eafc2;
+}
+.container .c1 {
+  background: url("../images/drawers.jpg") no-repeat center;
+  background-size: cover;
+  border-radius: 10px 0 0 10px;
+}
+.container .c2 {
+  padding: 2.5em;
+  background: #fff;
+  border-radius: 0 10px 10px 0;
+  position: relative;
+}
+.container .c2 .shift {
+  font-size: 20px;
+  color: #48556a;
+  font-weight: 700;
+}
+.container .c2 main {
+  color: #9eafc2;
+  font-size: 13px;
+  margin: 1.2em 0;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.container .c2 footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  top: 1em;
+}
+.container .c2 footer .avatar-michelle {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+.container .c2 footer .michelle-appleton {
+  margin: 0 1em;
+}
+.container .c2 footer .michelle-appleton h3 {
+  color: #48556a;
+  font-size: 13px;
+}
+.container .c2 footer .michelle-appleton p {
+  color: #9eafc2;
+  font-size: 10px;
+}
+.container .c2 footer .icon-share {
+  z-index: 9;
+  height: 30px;
+  width: 30px;
+  background: #ecf2f8;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.container .c2 .share {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 8;
+  bottom: 5em;
+  right: -3em;
+  height: 55px;
+  width: 220px;
+  align-items: center;
+  justify-content: center;
+  background: #48556a;
+  color: #ecf2f8;
+  display: flex;
+  border-radius: 10px;
+  transition: opacity 200ms ease-in;
+}
+.container .c2 .share span {
+  font-size: 16px;
+  letter-spacing: 3px;
+  margin: 0 20px 0 10px;
+  pointer-events: none;
+}
+.container .c2 .share ul {
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+}
+.container .c2 .share ul li {
+  list-style: none;
+  margin: 0 5px;
+}
+.container .c2 .share.active {
+  opacity: 1;
+  pointer-events: initial;
+}
+.container .c2 .share.active span {
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .container {
+    height: auto;
+    width: 80%;
+    display: grid;
+    grid-template-rows: 2fr 4fr;
+    grid-template-columns: 1fr;
+  }
+  .container .c1,
+.container .c2 {
+    width: 100%;
+  }
+  .container .c1 {
+    border-radius: 10px 10px 0 0 !important;
+  }
+  .container .c2 {
+    border-radius: 0 0 10px 10px !important;
+  }
+
+  #shareDiv {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 11vh;
+    width: 100%;
+    align-items: center;
+    justify-content: left;
+    background: #48556a;
+    color: #ecf2f8;
+    display: flex;
+    border-radius: 10px;
+    transition: opacity 200ms ease-in;
+  }
+  #shareDiv span {
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin: 0 20px 0 40px;
+    pointer-events: none;
+  }
+  #shareDiv ul {
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+  }
+  #shareDiv ul li {
+    list-style: none;
+    margin: 0 5px;
+  }
+  #shareDiv.active {
+    opacity: 1;
+    pointer-events: initial;
+  }
+  #shareDiv.active span {
+    pointer-events: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
